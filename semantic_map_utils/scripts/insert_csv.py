@@ -6,10 +6,15 @@ import argparse
 import sys
 
 
+def get_dialect(filename):
+    with open(filename, 'rb') as csvfile:
+        return csv.Sniffer().sniff(csvfile.read(1024), delimiters=";,")
+
 def file_reader(inputfile):
     print "openning %s" % inputfile
+    dialect = get_dialect(filename=inputfile)
     with open(inputfile) as csvfile:
-        reader = csv.DictReader(csvfile)
+        reader = csv.DictReader(csvfile, dialect=dialect)
         for row in reader:
             yield row
 
