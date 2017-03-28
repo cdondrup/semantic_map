@@ -8,7 +8,7 @@ import sys
 
 def get_dialect(filename):
     with open(filename, 'rb') as csvfile:
-        return csv.Sniffer().sniff(csvfile.read(1024), delimiters=";,")
+        return csv.Sniffer().sniff(csvfile.read(1024), delimiters=";")
 
 def file_reader(inputfile):
     print "openning %s" % inputfile
@@ -37,9 +37,26 @@ if __name__ == '__main__':
         sys.exit(1)
     
     db = client[args.db_name]   
+    if db[args.collection_name].find_one({"semantic_map_name": args.dataset_name}) != None:
+        print "The database already contains a semantic map with the name '%s'." % args.dataset_name
+        print "Override current entry?"
+        answer = raw_input("[y/n]: ")
+        print answer
+        if answer.lower() == "n":
+            print "Aborting database insertion."
+            sys.exit(1)
+        elif answer.lower() == "y":
+            print "Removing old entries."
+            db[args.collection_name].remove({"semantic_map_name": args.dataset_name})
+        else:
+            print "Unknown option '%s'" % answer
+            sys.exit(1)
+
     for row in file_reader(args.input):
         row["semantic_map_name"] = args.dataset_name
         db[args.collection_name].insert(row)
+    print "Inserted new entries as '%s'." % args.dataset_name
     db[args.collection_name].ensure_index("shop_id")
     db[args.collection_name].ensure_index("semantic_map_name")
+    print "Created indicies."
     print "done"
