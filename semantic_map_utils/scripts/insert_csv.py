@@ -41,7 +41,6 @@ if __name__ == '__main__':
         print "The database already contains a semantic map with the name '%s'." % args.dataset_name
         print "Override current entry?"
         answer = raw_input("[y/n]: ")
-        print answer
         if answer.lower() == "n":
             print "Aborting database insertion."
             sys.exit(1)
