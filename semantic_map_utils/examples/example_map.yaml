@@ -1,0 +1,201 @@
+shops:
+  - id: 0
+    name:
+      official: "starbucks"
+      synonyms: []
+    categories:
+      - coffee:
+          synonyms:
+            - "coffeeshop"
+            - "coffee shop"
+            - "coffeeshops"
+            - "coffee shops"
+          products:
+            - "cappuccino"
+            - "latte"
+            - "espresso"
+            - "americano"
+    sales:
+      app_id: null
+      offer: null
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 1
+    name:
+      official: "Hardware electronics"
+      synonyms: []
+    categories:
+      - electronics:
+          synonyms: []
+          products:
+            - "iPhone"
+            - "Samsung"
+            - "case"
+            - "adapter"
+            - "television"
+            - "TV"
+            - "charger"
+            - "mobile"
+            - "phone"
+    sales:
+      app_id: null
+      offer: null
+    location:
+      x: 4.0
+      y: -4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 2
+    name:
+      official: "costa"
+      synonyms:
+        - "coasta"
+        - "coastal"
+    categories:
+      - coffee:
+          synonyms:
+            - "coffeeshop"
+            - "coffee shop"
+            - "coffeeshops"
+            - "coffee shops"
+          products:
+            - "cappuccino"
+            - "latte"
+            - "espresso"
+            - "americano"
+    sales:
+      app_id: null
+      offer: null
+    location:
+      x: -4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 3
+    name:
+      official: "tesco"
+      synonyms:
+        - "disco"
+        - "school"
+    categories:
+      - clothing:
+          synonyms:
+            - "clothing shop"
+            - "clothe shops"
+            - "clothing shops"
+          products:
+            - "clothes"
+            - "shoes"
+            - "jacket"
+            - "t-shirt"
+            - "belt"
+            - "jeans"
+            - "trousers"
+            - "shirt"
+            - "underwear"
+            - "clothing"
+            - "dress"
+            - "skirt"
+            - "jumper"
+      - food:
+          synonyms:
+            - "grocery store"
+            - "supermarket"
+          products:
+            - "cheese"
+            - "wine"
+    sales:
+      app_id: "showqrcode2-0b7b26/behavior_1"
+      offer: "{name[official]} currently has {categories[1][food][products][1]} on offer."
+    location:
+      x: -4.0
+      y: -4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 4
+    name:
+      official: "public"
+      synonyms: []
+    categories:
+      - electronics:
+          synonyms: []
+          products:
+            - "iPhone"
+            - "Samsung"
+            - "case"
+            - "adapter"
+            - "television"
+            - "TV"
+            - "charger"
+            - "mobile"
+            - "phone"
+    sales:
+      app_id: null
+      offer: null
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 5
+    name:
+      official: "primark"
+      synonyms:
+        - "premark"
+    categories:
+      - clothing:
+          synonyms:
+            - "clothing shop"
+            - "clothe shops"
+            - "clothing shops"
+          products:
+            - "clothes"
+            - "shoes"
+            - "jacket"
+            - "t-shirt"
+            - "belt"
+            - "jeans"
+            - "trousers"
+            - "shirt"
+            - "underwear"
+            - "clothing"
+            - "dress"
+            - "skirt"
+            - "jumper"
+    sales:
+      app_id: null
+      offer: null
+    location:
+      x: 4.0
+      y: -4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 6
+    name:
+      official: "pc world"
+      synonyms:
+        - "pcworld"
+    categories:
+      - electronics:
+          synonyms: []
+          products:
+            - "iPhone"
+            - "Samsung"
+            - "case"
+            - "adapter"
+            - "television"
+            - "TV"
+            - "charger"
+            - "mobile"
+            - "phone"
+    sales:
+      app_id: "showqrcode2-0b7b26/behavior_1"
+      offer: "{name[official]} currently has overpriced {categories[0][electronics][products][0]}s on offer but they are still overpriced."
+    location:
+      x: -4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to {name[official]} you need to go left then straight ahead and you will find it after the second junction."

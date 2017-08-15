@@ -1,29 +1,21 @@
 #!/usr/bin/env python
 
 from pymongo import MongoClient
-import csv
+import yaml
 import argparse
 import sys
 
 
-def get_dialect(filename):
-    with open(filename, 'rb') as csvfile:
-        return csv.Sniffer().sniff(csvfile.read(1024), delimiters=";")
-
-
 def file_reader(inputfile):
     print "Opening %s" % inputfile
-    dialect = get_dialect(filename=inputfile)
-    with open(inputfile) as csvfile:
-        reader = csv.DictReader(csvfile, dialect=dialect)
-        for row in reader:
-            yield row
+    with open(inputfile) as f:
+        return yaml.load(f)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset_name", help="The name of the dataset. Saved in meta information using 'meta_name'", type=str)
-    parser.add_argument("-i", "--input", help="Input csv file", type=str, required=True)
+    parser.add_argument("-i", "--input", help="Input yaml file", type=str, required=True)
     parser.add_argument("--db_name", help="The database name. Default: semantic_map", type=str, default="semantic_map")
     parser.add_argument("--collection_name", help="The collection name. Default: idea_park", type=str, default="idea_park")
     parser.add_argument("--db_host", help="The database host address. Default: localhost", type=str, default="localhost")
@@ -52,11 +44,13 @@ if __name__ == '__main__':
             print "Unknown option '%s'" % answer
             sys.exit(1)
 
-    for row in file_reader(args.input):
-        row["semantic_map_name"] = args.dataset_name
-        db[args.collection_name].insert(row)
+    for shop in file_reader(args.input)["shops"]:
+        shop["semantic_map_name"] = args.dataset_name
+        db[args.collection_name].insert(shop)
+
     print "Inserted new entries as '%s'." % args.dataset_name
-    db[args.collection_name].ensure_index("shop_id")
+
+    db[args.collection_name].ensure_index("id")
     db[args.collection_name].ensure_index("semantic_map_name")
     print "Created indices."
     print "done"
