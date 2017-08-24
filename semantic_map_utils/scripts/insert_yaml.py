@@ -9,7 +9,7 @@ import sys
 def file_reader(inputfile):
     print "Opening %s" % inputfile
     with open(inputfile) as f:
-        return yaml.load(f)
+        return yaml.load_all(f)
 
 
 if __name__ == '__main__':
@@ -40,13 +40,22 @@ if __name__ == '__main__':
         elif answer.lower() == "y":
             print "Removing old entries."
             db[args.collection_name].remove({"semantic_map_name": args.dataset_name})
+            db[args.collection_name].remove({"semantic_map_name": args.dataset_name+'_sales'})
         else:
             print "Unknown option '%s'" % answer
             sys.exit(1)
 
-    for shop in file_reader(args.input)["shops"]:
-        shop["semantic_map_name"] = args.dataset_name
-        db[args.collection_name].insert(shop)
+    print "Opening %s" % args.input
+    with open(args.input) as f:
+        for entry in yaml.load_all(f):
+            try:
+                for shop in entry["shops"]:
+                    shop["semantic_map_name"] = args.dataset_name
+                    db[args.collection_name].insert(shop)
+            except KeyError:
+                for shop in entry["sales"]:
+                    shop["semantic_map_name"] = args.dataset_name+'_sales'
+                    db[args.collection_name].insert(shop)
 
     print "Inserted new entries as '%s'." % args.dataset_name
 

@@ -1,0 +1,153 @@
+shops:
+  - id: 0
+    name:
+      official: "front shop"
+      synonyms: []
+    categories:
+      - fruit_and_vegetable_shelves:
+          synonyms: []
+          products:
+            - "Boxed Chocolates"
+            - "Dried Fruit"
+            - "Graze Nut Mix"
+            - "Bananas"
+            - "Packed Apples"
+            - "Packed Plums"
+            - "Whole Dates"
+            - "Melons"
+            - "Onions"
+            - "Potatoes"
+      - fruit_and_vegetable_fridge:
+          synonyms: []
+          products:
+            - "Fresh Fruit"
+            - "Fresh Vegetables"
+            - "Prepared vegetables"
+            - "packed vegetables"
+            - "Salad bags"
+            - "Fresh Herbs"
+      - tills:
+          synonyms: []
+          products:
+            - "Chocolate Bars"
+            - "Chocolate Bar"
+            - "Fudge"
+            - "Flap Jacks"
+            - "Mints"
+            - "Gum"
+            - "Bubblegum"
+            - "Cough Sweets"
+            - "Chocolate Covered Rice Cakes"
+            - "Licorice"
+            - "Hard Boiled Sweets"
+            - "Fruit drops"
+            - "Trek Bars"
+            - "Naked Bars"
+            - "Porridge Bars"
+            - "Health bars"
+            - "Batteries"
+      - behind_the_tills:
+          synonyms: []
+          products:
+            - "Cigarettes"
+            - "Boxed Chocolates"
+            - "Gin"
+            - "Spirits"
+            - "Liquor"
+            - "Prosecco"
+            - "Champagne"
+            - "Whiskey"
+            - "Paracetamol"
+            - "ibuprofen"
+            - "Cough Medicine"
+            - "Cold Medicine"
+            - "Stomach Medicine"
+            - "Scratch Cards"
+            - "Matches"
+            - "Lighters"
+            - "Car Lighter Adaptor"
+      - front_freezer:
+          synonyms: []
+          products:
+            - "Ice Cream"
+            - "Ice Lollies"
+            - "Ice Cream bars"
+      - front_fridge:
+          synonyms: []
+          products:
+            - "Coke"
+            - "Pepsi"
+            - "Irn Bru"
+            - "Iron Brew"
+            - "San Pellegrino"
+            - "Lemonade"
+            - "Flavoured Water"
+            - "Vitamin Water"
+            - "Ribena Juice"
+            - "Ice Tea"
+            - "Lucozade"
+            - "Ginger Beer"
+            - "Root Beer"
+            - "Red Bull"
+            - "Energy Drinks"
+            - "Coconut Water"
+            - "chilled coffee drinks"
+            - "Cold Brew Coffee"
+            - "Dairy Smoothie"
+            - "Fruit Smoothie"
+            - "Dairy Smoothies"
+            - "Fruit Smoothies"
+            - "Fruit Juice"
+            - "Sparkling Juice"
+            - "Fruit Juices"
+            - "Sparkling Juices"
+            - "Wraps"
+            - "Sandwiches"
+            - "Sandwich"
+            - "Filled Rolls"
+            - "Salads"
+            - "Deli Soup"
+            - "Delphi Salad"
+            - "Fruit Snack"
+            - "Vegetable Snack"
+            - "Sausage Rolls"
+            - "Pies"
+            - "Vegetarian Pasties"
+            - "Sushi"
+            - "Cheese snacks"
+            - "Pepperoni"
+            - "Mini Butter"
+            - "Mini Jam"
+            - "Trek Bars"
+            - "Porridge Bars"
+            - "Bounce Balls"
+      - coffee_machine:
+          synonyms: []
+          products:
+            - "Espresso"
+            - "Black Coffee"
+            - "Tea"
+            - "Cappuccino"
+            - "Latte"
+            - "Hot Chocolate"
+            - "tray bakes"
+            - "muffins"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+---
+sales:
+  - name: "fudge"
+    mention_in_conversation: true
+    app_id: "showqrcode2-0b7b26/behavior_1"
+    offer: "{name} is currently on offer, 2 for 1."
+  - name: "gum"
+    mention_in_conversation: false
+    app_id: "showqrcode2-0b7b26/behavior_1"
+    offer: "{name} is currently on offer, 2 for 1."
+  - name: "ice tea"
+    mention_in_conversation: true
+    app_id: "showqrcode2-0b7b26/behavior_1"
+    offer: "{name} is currently on offer, 2 for 1."
