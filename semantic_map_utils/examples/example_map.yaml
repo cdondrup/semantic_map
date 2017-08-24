@@ -16,6 +16,7 @@ shops:
             - "espresso"
             - "americano"
     sales:
+      mention_in_conversation: false
       app_id: null
       offer: null
     location:
@@ -41,6 +42,7 @@ shops:
             - "mobile"
             - "phone"
     sales:
+      mention_in_conversation: false
       app_id: null
       offer: null
     location:
@@ -67,6 +69,7 @@ shops:
             - "espresso"
             - "americano"
     sales:
+      mention_in_conversation: false
       app_id: null
       offer: null
     location:
@@ -108,6 +111,7 @@ shops:
             - "cheese"
             - "wine"
     sales:
+      mention_in_conversation: true
       app_id: "showqrcode2-0b7b26/behavior_1"
       offer: "{name[official]} currently has {categories[1][food][products][1]} on offer."
     location:
@@ -133,6 +137,7 @@ shops:
             - "mobile"
             - "phone"
     sales:
+      mention_in_conversation: false
       app_id: null
       offer: null
     location:
@@ -166,6 +171,7 @@ shops:
             - "skirt"
             - "jumper"
     sales:
+      mention_in_conversation: false
       app_id: null
       offer: null
     location:
@@ -192,6 +198,7 @@ shops:
             - "mobile"
             - "phone"
     sales:
+      mention_in_conversation: true
       app_id: "showqrcode2-0b7b26/behavior_1"
       offer: "{name[official]} currently has overpriced {categories[0][electronics][products][0]}s on offer but they are still overpriced."
     location:
