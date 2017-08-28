@@ -60,6 +60,7 @@ if __name__ == '__main__':
     print "Inserted new entries as '%s'." % args.dataset_name
 
     db[args.collection_name].ensure_index("id")
+    db[args.collection_name].ensure_index("name")
     db[args.collection_name].ensure_index("semantic_map_name")
     print "Created indices."
     print "done"
