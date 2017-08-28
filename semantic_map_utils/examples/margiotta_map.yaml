@@ -9,7 +9,7 @@ shops:
           products:
             - "Boxed Chocolates"
             - "Dried Fruit"
-            - "Graze Nut Mix"
+            - "Nut Mix"
             - "Bananas"
             - "Packed Apples"
             - "Packed Plums"
@@ -93,14 +93,9 @@ shops:
             - "Coconut Water"
             - "chilled coffee drinks"
             - "Cold Brew Coffee"
-            - "Dairy Smoothie"
-            - "Fruit Smoothie"
-            - "Dairy Smoothies"
-            - "Fruit Smoothies"
-            - "Fruit Juice"
-            - "Sparkling Juice"
-            - "Fruit Juices"
-            - "Sparkling Juices"
+            - "Smoothie"
+            - "Smoothies"
+            - "Juice"
             - "Wraps"
             - "Sandwiches"
             - "Sandwich"
@@ -118,7 +113,6 @@ shops:
             - "Pepperoni"
             - "Mini Butter"
             - "Mini Jam"
-            - "Trek Bars"
             - "Porridge Bars"
             - "Bounce Balls"
       - coffee_machine:
@@ -137,17 +131,262 @@ shops:
       y: 4.0
       waypoint: "none"
       directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 1
+    name:
+      official: "Backshop Gondolas"
+      synonyms: []
+    categories:
+      - gondola_1:
+          synonyms:
+            - "gondola one"
+          products:
+            - "Bar"
+            - "Bars"
+            - "Snack"
+            - "Snacks"
+            - "Confectionary"
+            - "Crisps"
+            - "Cake"
+            - "Cakes"
+            - "Packed Bread"
+      - gondola_2:
+          synonyms:
+            - "gondola two"
+          products:
+            - "Cake"
+            - "Cakes"
+            - "Free-From"
+            - "Free From"
+            - "Gluten-Free"
+            - "Gluten Free"
+            - "Italian"
+            - "Pasta"
+            - "Tinned Tomato"
+            - "Tinned Tomatoes"
+            - "Sauce"
+            - "Sauces"
+      - gondola_3:
+          synonyms:
+            - "gondola three"
+          products:
+            - "Artisian bread"
+            - "Polish Bread"
+            - "Local Products"
+      - gondola_4:
+          synonyms:
+            - "gondola four"
+          products:
+            - "Noodles"
+            - "Herbs"
+            - "Spices"
+            - "Condiments"
+            - "Canned Fish"
+            - "Frozen ready Meals"
+            - "Rice"
+            - "Canned Veg"
+            - "Canned Soup"
+      - gondola_5:
+          synonyms:
+            - "gondola five"
+          products:
+            - "Eggs"
+            - "Cereal"
+            - "Frozen ready Meals"
+            - "Crackers"
+            - "Spread"
+            - "Nuts"
+            - "Home Baking"
+      - gondola_6:
+          synonyms:
+            - "gondola six"
+          products:
+            - "Biscuits"
+            - "Oatcakes"
+            - "Tea"
+            - "Coffee"
+      - gondola_7:
+          synonyms:
+            - "gondola seven"
+          products:
+            - "Crisps"
+            - "Nuts"
+            - "Snacks"
+            - "Bottled Water"
+            - "Toilet paper"
+            - "Kitchen Paper"
+      - gondola_8:
+          synonyms:
+            - "gondola eight"
+          products:
+            - "House Hold"
+            - "Pet Food"
+            - "Personal Essentials"
+            - "Household Cleaning"
+            - "Laundry"
+      - gondola_9:
+          synonyms:
+            - "gondola nine"
+          products:
+            - "Italian Biscuits"
+            - "House Hold"
+            - "Stationary"
+            - "Toiletries"
+            - "Baby Food"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 2
+    name:
+      official: "Backshop Perimetre Shelves"
+      synonyms:
+       - "Back shop Perimeter Shelves"
+       - "Back shop Perimetre Shelves"
+    categories:
+      - wall_shelves:
+          synonyms: []
+          products:
+            - "Soft Drink"
+            - "Soft Drinks"
+            - "Juice"
+            - "Stationery"
+            - "Cards"
+            - "Wrapping paper"
+            - "Candles"
+            - "Gift Bags"
+            - "Greeting Cards"
+      - deli:
+          synonyms: []
+          products:
+            - "Hot Food"
+            - "Breakfast Rolls"
+            - "Hot Lunch"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 3
+    name:
+      official: "Back Shop Fridges"
+      synonyms:
+       - "Backshop Fridges"
+    categories:
+      - fridge:
+          synonyms: []
+          products:
+            - "Dips"
+            - "Fish"
+            - "Meat"
+            - "Sausages"
+            - "Bacon"
+            - "Ready Meals"
+            - "Pizza"
+            - "Sliced Meat"
+            - "Tapas"
+            - "Deli Meat"
+            - "Cheese"
+            - "Butter"
+            - "Yogurts"
+            - "Creams"
+            - "Desserts"
+            - "Milk"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 4
+    name:
+      official: "Back Shop Fridges"
+      synonyms:
+       - "Backshop Fridges"
+    categories:
+      - fridge:
+          synonyms: []
+          products:
+            - "Dips"
+            - "Fish"
+            - "Meat"
+            - "Sausages"
+            - "Bacon"
+            - "Ready Meals"
+            - "Pizza"
+            - "Sliced Meat"
+            - "Tapas"
+            - "Deli Meat"
+            - "Cheese"
+            - "Butter"
+            - "Yogurts"
+            - "Creams"
+            - "Desserts"
+            - "Milk"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 5
+    name:
+      official: "Freezers"
+      synonyms: []
+    categories:
+      - freezer:
+          synonyms: []
+          products:
+            - "Ice Cream"
+            - "Frozen Fruit"
+            - "Frozen Desserts"
+            - "Frozen Pizza"
+            - "Ready Meals"
+            - "Frozen Chicken"
+            - "Frozen Meat"
+            - "Frozen Pies"
+            - "Frozen Fish"
+            - "Fries"
+            - "Chips"
+            - "Frozen Potatoes"
+            - "Frozen Vegetables"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
+  - id: 6
+    name:
+      official: "Alcohol Section"
+      synonyms: []
+    categories:
+      - alcohol:
+          synonyms: []
+          products:
+            - "Wine"
+            - "Red Wine"
+            - "White Wine"
+            - "Beer"
+            - "Cider"
+            - "Craft Beers"
+            - "Bagged Ice Freezer"
+    location:
+      x: 4.0
+      y: 4.0
+      waypoint: "none"
+      directions: "To get to the {name[official]} you need to go left then straight ahead and you will find it after the second junction."
 ---
 sales:
-  - name: "fudge"
+  - id: 0
+    name: "fudge"
     mention_in_conversation: true
     app_id: "showqrcode2-0b7b26/behavior_1"
     offer: "{name} is currently on offer, 2 for 1."
-  - name: "gum"
+  - id: 1
+    name: "gum"
     mention_in_conversation: false
     app_id: "showqrcode2-0b7b26/behavior_1"
     offer: "{name} is currently on offer, 2 for 1."
-  - name: "ice tea"
+  - id: 2
+    name: "ice tea"
     mention_in_conversation: true
     app_id: "showqrcode2-0b7b26/behavior_1"
     offer: "{name} is currently on offer, 2 for 1."
